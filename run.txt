@@ -1,0 +1,4 @@
+
+#运行mysql容器
+#挂载数据目录在当前目录里
+docker run -p 33026:3306 --name steer-mysql -v /home/fangwk/docker-workspace/mysql/db/:/var/lib/mysql/ -v /home/fangwk/docker-workspace/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=root --network=steer-bridge --ip 182.18.1.2 -d hub.c.163.com/library/mysql:5.7.18
